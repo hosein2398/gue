@@ -34,7 +34,7 @@ You can define a directory which you want your component to be generated in.
 gue tab ./menu
 ```
 This will generate `tab` component in `./menu/tab.vue`
-> Consider behavior of directory parameter when you have a config file and you don't. [details](#usage)
+> Consider behavior of directory parameter when you have a config file and you don't. [details](#usage)  
 > For a consistent way to change root directory of components see  [config](#config-file).
 
 #### Generate test file
