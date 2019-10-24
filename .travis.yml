@@ -1,0 +1,13 @@
+language: node_js
+os:
+  - linux
+  - osx
+cache:
+  directories:
+  - node_modules
+node_js:
+    - "9"
+services:
+  - xvfb
+before_script:
+    - npm install

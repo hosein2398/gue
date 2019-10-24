@@ -1,0 +1,71 @@
+{
+  "name": "vue-gue",
+  "version": "0.1.0",
+  "description": "Vue component generator",
+  "repository": {
+    "url": "https://github.com/hosein2398/gue",
+    "type": "git"
+  },
+  "author": "Hosein2398<hosein2398@gmail.com>",
+  "keywords": [
+    "vue",
+    "cli",
+    "component",
+    "generate",
+    "generate component"
+  ],
+  "files": [
+    "src"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "xo",
+    "cleanTestDir": "node ./test/cleanup.js",
+    "pretest": "npm run cleanTestDir",
+    "test": "cd test && ../node_modules/.bin/tap ./index.js",
+    "posttest": "npm run cleanTestDir",
+    "commit": "git-cz"
+  },
+  "bin": {
+    "gue": "src/bin.js"
+  },
+  "dependencies": {
+    "boxen": "^4.1.0",
+    "chalk": "^2.4.2",
+    "commander": "^3.0.2",
+    "joycon": "^2.2.5"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.0.9",
+    "rimraf": "^3.0.0",
+    "tap": "^14.7.2",
+    "xo": "^0.25.3"
+  },
+  "xo": {
+    "space": true,
+    "rules": {
+      "no-unused-expressions": [
+        "error",
+        {
+          "allowShortCircuit": true
+        }
+      ]
+    },
+    "ignore": [
+      "./test/templates/myUnitTmp.js"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
