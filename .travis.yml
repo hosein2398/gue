@@ -2,11 +2,15 @@ language: node_js
 os:
   - linux
   - osx
+
 cache:
   directories:
   - node_modules
+  - $HOME/.npm
+
 node_js:
-    - "9"
+    - "10"
+
 services:
   - xvfb
 before_script:
