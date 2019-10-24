@@ -4,7 +4,7 @@
 > Vue js component generator
 
 <p align="center">
-  <img width="600" src="preview.svg">
+  <img src="./preview.gif">
 </p>
 
 
