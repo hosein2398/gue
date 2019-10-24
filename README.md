@@ -101,4 +101,4 @@ data() {
 <style scoped>
 </style>
 ```
-To see other examples look at [templates folder](tree/master/src/templates).
+To see other examples look at [templates folder](https://github.com/hosein2398/gue/tree/master/src/templates).
