@@ -1,5 +1,7 @@
 
-# Gue   [![Build Status](https://travis-ci.org/hosein2398/gue.svg?branch=master)](https://travis-ci.org/hosein2398/gue) ![Download-week](https://img.shields.io/npm/dw/vue-gue.svg?style=flat-square)
+# Gue   [![Build Status](https://travis-ci.org/hosein2398/gue.svg?branch=master)](https://travis-ci.org/hosein2398/gue) [![codecov](https://codecov.io/gh/hosein2398/gue/branch/master/graph/badge.svg)](https://codecov.io/gh/hosein2398/gue) ![Download-week](https://img.shields.io/npm/dw/vue-gue.svg?style=flat-square)
+
+
 
 > Vue js component generator
 
