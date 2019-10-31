@@ -50,30 +50,31 @@ class Gue {
   formatComponent() {
     let data;
     if (this.options.template) {
-
       this.checkConfigExist();
       if (!isObject(this.componentSource)) {
         logger.fatal('When using -t your componentSource must be an object');
       }
+
       if (isObject(this.componentSource)) {
         if (!(this.options.template in this.componentSource)) {
           logger.fatal(`There is no "${this.options.template}" template in componentSource in gue config file`);
         }
+
         data = fs.readFileSync(this.componentSource[this.options.template], {encoding: 'utf8'});
       }
-
     } else if (isObject(this.componentSource)) {
-
       const defaultTemplate = findDefault(this.componentSource);
       if (!defaultTemplate) {
-        logger.fatal('No default component defined in componentSource object')
+        logger.fatal('No default component defined in componentSource object');
       }
+
       data = fs.readFileSync(this.componentSource[defaultTemplate], {encoding: 'utf8'});
     } else {
       data = this.componentSource ?
         fs.readFileSync(this.componentSource, {encoding: 'utf8'}) :
         cmpTemplate;
     }
+
     const rex = /<%NAME%>/g;
     return data.replace(rex, this.componentName);
   }
