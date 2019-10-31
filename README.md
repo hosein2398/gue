@@ -47,20 +47,27 @@ This will generate `footer` component in `./src/components/footer.vue` and also 
 ## Usage
 General usage is like:
 ```
-gue <componentName> [directory] [options]
+$ gue --help
+  Usage: gue <componentName> [direcroty] [options]
+
+  Options:
+    -u, --unit             create unit test of the component too
+    -t, --template <name>  define which template to use
+    -h, --help             output usage information
+
 ```
 * &lt;componentName&gt; is mandatory.
 * [directory] is optional, and is a relative path.
   If you have a config file this will be a `subdirectory` of your [componentRoot](#options)
   If you don't, then this will lead to generation of component in exact `direcroty` 
-* [options] are optional, only available option is `-u` which will generate test file.
+* [options] are optional, available options are `-u` which will generate test file, and `-t` which is used to define which template for components to use.
 
 ## Config file
 Gue accepts a config file to change default settings. In root directory of project make a file `gue.json`, and Gue will automatically recognize and use it.
 #### Options
 Here are available options for config file:
 * `componentRoot`: root directory which components will be generated in. should be relative path.
-* `componentSource`: path to custom component template.
+* `componentSource`: path to custom component template. Or an object to define [multiple templates](#using-multiple-custom-templates).
 * `unitRoot`:  directory which test  will be generated in. should be a relative path.
 * `unitSource`: path to custom test file template.
 
@@ -104,3 +111,32 @@ data() {
 </style>
 ```
 To see other examples look at [templates folder](https://github.com/hosein2398/gue/tree/master/src/templates).
+##### Using multiple custom templates
+You can use multiple custom templates. So `componentSource` can be object (multiple templates) or a string (single template). Multiple templates can be created like:
+```
+{
+  "componentSource": {
+    "component"  :  "./tmps/component.vue",
+    "page"  :  "./tmps/page.vue"
+  }
+}
+```
+And when using Gue you have to tell it which component template to use:
+```
+gue menu -t component
+gue setting ./pages -t page
+```
+You can define one of your templates as `default` one, so that you don't have to type `-t` every time. Default component can be specified with `:default` postfix:
+```
+{
+  "componentSource": {
+    "component:default"  :  "./tmps/component.vue",
+    "page"  :  "./tmps/page.vue"
+  }
+}
+```
+Now if you type any command without `-t`, component template will be used.
+```
+gue foo 
+```
+Will use `component` template to generate foo component. No need of `-t component`
