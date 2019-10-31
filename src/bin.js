@@ -5,7 +5,8 @@ const Gue = require('.');
 
 program
   .arguments('<componentName> [direcroty]')
-  .option('-u, --unit', 'create unit test of the component too');
+  .option('-u, --unit', 'create unit test of the component too')
+  .option('-t, --template <name>', 'define which template to use');
 
 const params = program.parse(process.argv);
 

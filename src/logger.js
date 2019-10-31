@@ -40,6 +40,13 @@ class Logger {
     );
     console.log(e);
   }
+
+  fatal(e) {
+    console.log(
+      box(`⚠️ ${chalk.red(e)}`, {padding: 1})
+    );
+    throw new Error(e);
+  }
 }
 
 module.exports = new Logger();
