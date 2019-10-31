@@ -48,6 +48,7 @@ This will generate `footer` component in `./src/components/footer.vue` and also 
 General usage is like:
 ```
 $ gue --help
+
   Usage: gue <componentName> [direcroty] [options]
 
   Options:
