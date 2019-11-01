@@ -78,7 +78,7 @@ Here are available options for config file:
 * `unitSource`: path to custom test file template.
 
 An example of a config file with all options:
-```
+```json
 {
   "componentRoot":"./front-end/src/components",
   "unitRoot":"./front-end/test",
@@ -119,7 +119,7 @@ data() {
 To see other examples look at [templates folder](https://github.com/hosein2398/gue/tree/master/src/templates).
 ##### Using multiple custom templates
 You can use multiple custom templates. So `componentSource` can be object (multiple templates) or a string (single template). Multiple templates can be created like:
-```
+```json
 {
   "componentSource": {
     "component"  :  "./tmps/component.vue",
@@ -133,7 +133,7 @@ gue menu -t component
 gue setting ./pages -t page
 ```
 You can define one of your templates as `default` one, so that you don't have to type `-t` every time. Default component can be specified with `:default` postfix:
-```
+```json
 {
   "componentSource": {
     "component:default"  :  "./tmps/component.vue",
