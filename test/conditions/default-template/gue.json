@@ -1,0 +1,6 @@
+{
+    "componentSource": {
+        "white" : "./white.vue",
+        "black:default" : "./black.vue"
+    }
+}

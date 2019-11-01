@@ -11,7 +11,8 @@ for (const file of files) {
     '.nyc_output',
     'cleanup.js',
     'gue.json',
-    'templates'
+    'templates',
+    'conditions'
   ];
   if (doNotRemove.includes(file)) {
     continue;

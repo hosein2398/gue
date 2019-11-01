@@ -1,0 +1,6 @@
+{
+    "componentSource": {
+        "some" : "./some/sdf.vue",
+        "right" : "./right.vue"
+    }
+}
