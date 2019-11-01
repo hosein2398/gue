@@ -6,6 +6,11 @@
 > Vue js component generator
 
 <p align="center">
+<img width="430" src="./logo.png">
+</p>
+
+## Demo
+<p align="center">
   <img src="./preview.gif">
 </p>
 
