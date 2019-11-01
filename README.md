@@ -1,5 +1,5 @@
 
-# Gue   [![Build Status](https://travis-ci.org/hosein2398/gue.svg?branch=master)](https://travis-ci.org/hosein2398/gue) [![Coverage Status](https://coveralls.io/repos/github/hosein2398/gue/badge.svg?branch=master)](https://coveralls.io/github/hosein2398/gue?branch=master)
+# Gue   [![Build Status](https://travis-ci.org/hosein2398/gue.svg?branch=master)](https://travis-ci.org/hosein2398/gue) [![Coverage Status](https://coveralls.io/repos/github/hosein2398/gue/badge.svg?branch=master&kill_cache=1)](https://coveralls.io/github/hosein2398/gue?branch=master)
 
 
 
