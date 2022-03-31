@@ -1,10 +1,10 @@
 module.exports = `
 <template>
-  <div class="app">
+  <div class="<%NAME_KEBAB%>" id="<%NAME_KEBAB%>">
      
   </div>
 </template>
-
+<script>
 export default  {
     name: "<%NAME%>",
     props: [],
@@ -16,6 +16,9 @@ export default  {
         
       }
     },
+    components: {
+
+    },
     methods: {
      
     },
@@ -23,9 +26,9 @@ export default  {
   
     }
 }
-
-<style>
-.app {
+</script>
+<style lang="scss" scoped>
+.<%NAME_KEBAB%> {
 
 }
 </style>
