@@ -8,6 +8,10 @@ module.exports = `
 export default  {
     name: "<%NAME%>",
     props: [],
+    emits: [], // Nueva manera de declara eventos personalizados den vue 3.
+    created() {
+
+    },
     mounted() {
       
     },
@@ -17,19 +21,19 @@ export default  {
       }
     },
     components: {
-
+      
     },
     methods: {
-     
+      
     },
     computed: {
-  
+      
     }
 }
 </script>
 <style lang="scss" scoped>
 .<%NAME_KEBAB%> {
-
+  
 }
 </style>
 `;
