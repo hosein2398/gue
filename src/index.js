@@ -76,7 +76,9 @@ class Gue {
     }
 
     const rex = /<%NAME%>/g;
-    return data.replace(rex, this.componentName);
+    data = data.replace(rex, this.componentName);
+    const rex_kebab = /<%NAME_KEBAB%>/g;
+    return data.replace(rex_kebab, this.componentName.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase());
   }
 
   formatUnit() {

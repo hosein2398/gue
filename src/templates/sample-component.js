@@ -1,13 +1,17 @@
 module.exports = `
 <template>
-  <div class="app">
+  <div class="<%NAME_KEBAB%>" id="<%NAME_KEBAB%>">
      
   </div>
 </template>
-
+<script>
 export default  {
     name: "<%NAME%>",
     props: [],
+    emits: [], // Nueva manera de declara eventos personalizados den vue 3.
+    created() {
+
+    },
     mounted() {
       
     },
@@ -16,17 +20,20 @@ export default  {
         
       }
     },
+    components: {
+      
+    },
     methods: {
-     
+      
     },
     computed: {
-  
+      
     }
 }
-
-<style>
-.app {
-
+</script>
+<style lang="scss" scoped>
+.<%NAME_KEBAB%> {
+  
 }
 </style>
 `;
